@@ -4,12 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MustafaMC Launcher</title>
-  <img src="images/mustafamc-logo.png" alt="MustafaMC Logo" width="400" />
-  <h2>Without Animation</h2>
-<img src="images/logo1.png" width="300" />
-
-<h2>With Animation</h2>
-<img src="images/logo2.png" class="slide-zoom" width="300" />
   <style>
     body {
       margin: 0;
@@ -54,6 +48,28 @@
       transform: scale(1.05);
     }
 
+    .slide-zoom {
+      opacity: 0;
+      transform: translateY(50px) scale(0.9);
+      animation: slideZoomIn 1s ease-out forwards;
+    }
+
+    @keyframes slideZoomIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+      }
+    }
+
+    .slide-zoom:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
     footer {
       position: absolute;
       bottom: 15px;
@@ -63,9 +79,20 @@
   </style>
 </head>
 <body>
+  <img src="images/mustafamc-logo.png" alt="MustafaMC Logo" width="400" />
+
   <h1>MustafaMC Launcher</h1>
   <h2>Made by Mustafa (Age 10) – For My Parents 💚</h2>
+
+  <h2>Without Animation</h2>
+  <img src="images/logo1.png" width="300" />
+
+  <h2>With Animation</h2>
+  <img src="images/logo2.png" class="slide-zoom" width="300" />
+
+  <br /><br />
   <a class="download-btn" href="MustafaMC_Client_v1.0 (4).zip" download>⬇ Download MustafaMC v1.0</a>
+
   <footer>🇵🇰 Pakistan Zindabad – Faith, Love & Minecraft</footer>
 </body>
 </html>
